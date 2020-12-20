@@ -2,6 +2,7 @@ using System;
 using System.Threading.Tasks;
 using ArmaForces.ArmaServerManager.Discord.Bot.Extensions;
 using ArmaForces.ArmaServerManager.Discord.Bot.Services;
+using ArmaForces.ArmaServerManager.Discord.Extensions;
 using Discord.WebSocket;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
