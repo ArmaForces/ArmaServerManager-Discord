@@ -18,12 +18,12 @@ namespace ArmaForces.ArmaServerManager.Discord.Features.Server
 
         [Command("startServer")]
         [Summary("Pozwala uruchomić serwer z zadanym modsetem o zadanej godzinie w danym dniu. Na przykład: AF!startServer default 2020-07-17T19:00.")]
-        public async Task StartServer(string modsetName)
+        public virtual async Task StartServer(string modsetName)
             => await StartServer(modsetName, null);
 
         [Command("startServer")]
         [Summary("Pozwala uruchomić serwer z zadanym modsetem o zadanej godzinie w danym dniu. Na przykład: AF!startServer default 2020-07-17T19:00.")]
-        public async Task StartServer(string modsetName, DateTime? dateTime)
+        public virtual async Task StartServer(string modsetName, DateTime? dateTime)
         {
             var result = _serverManagerClient.RequestStartServer(modsetName, dateTime);
 
@@ -34,7 +34,7 @@ namespace ArmaForces.ArmaServerManager.Discord.Features.Server
 
         [Command("serverStatus")]
         [Summary("Sprawdza status serwera.")]
-        public async Task ServerStatus()
+        public virtual async Task ServerStatus()
         {
             var result = _serverManagerClient.GetServerStatus();
 

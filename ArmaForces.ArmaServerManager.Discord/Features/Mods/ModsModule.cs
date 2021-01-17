@@ -16,12 +16,12 @@ namespace ArmaForces.ArmaServerManager.Discord.Features.Mods
 
         [Command("updateMods")]
         [Summary("Pozwala zaplanować aktualizację wszystkich modyfikacji lub wybranego modsetu.")]
-        public async Task UpdateMods(DateTime? scheduleAt = null)
+        public virtual async Task UpdateMods(DateTime? scheduleAt = null)
             => await UpdateMods(null, scheduleAt);
 
         [Command("updateMods")]
         [Summary("Pozwala zaplanować aktualizację wszystkich modyfikacji lub wybranego modsetu.")]
-        public async Task UpdateMods(string modsetName = null, DateTime? scheduleAt = null)
+        public virtual async Task UpdateMods(string modsetName = null, DateTime? scheduleAt = null)
         {
             var result = await _modsManagerClient.UpdateMods(modsetName, scheduleAt);
 
