@@ -3,7 +3,7 @@ using Microsoft.Extensions.Configuration;
 
 namespace ArmaForces.ArmaServerManager.Discord.Configuration
 {
-    public class ManagerConfiguration : IManagerConfiguration
+    internal class ManagerConfiguration : IManagerConfiguration
     {
         public string ServerManagerUrl { get; }
 
