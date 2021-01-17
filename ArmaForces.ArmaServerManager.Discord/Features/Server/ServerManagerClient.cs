@@ -5,7 +5,7 @@ using RestSharp;
 
 namespace ArmaForces.ArmaServerManager.Discord.Features.Server
 {
-    public class ServerManagerClient : ManagerClientBase, IServerManagerClient
+    internal class ServerManagerClient : ManagerClientBase, IServerManagerClient
     {
         // Port is const as Manager doesn't support multiple servers _yet_.
         private const int Port = 2302;
@@ -44,12 +44,5 @@ namespace ArmaForces.ArmaServerManager.Discord.Features.Server
                 ? Result.Success()
                 : ReturnFailureFromResponse<ServerStatus>(response);
         }
-    }
-
-    public interface IServerManagerClient
-    {
-        Result<ServerStatus> GetServerStatus();
-
-        Result RequestStartServer(ServerStartRequest serverStartRequest);
     }
 }

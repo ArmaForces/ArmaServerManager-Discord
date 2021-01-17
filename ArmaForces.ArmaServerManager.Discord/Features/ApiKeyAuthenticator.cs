@@ -4,7 +4,7 @@ using RestSharp.Authenticators;
 
 namespace ArmaForces.ArmaServerManager.Discord.Features
 {
-    public class ApiKeyAuthenticator : IAuthenticator
+    internal class ApiKeyAuthenticator : IAuthenticator
     {
         private readonly IManagerConfiguration _config;
         private const string HeaderField = "ApiKey";

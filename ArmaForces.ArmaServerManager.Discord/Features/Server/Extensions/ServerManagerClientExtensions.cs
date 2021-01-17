@@ -4,7 +4,7 @@ using CSharpFunctionalExtensions;
 
 namespace ArmaForces.ArmaServerManager.Discord.Features.Server.Extensions
 {
-    public static class ServerManagerClientExtensions
+    internal static class ServerManagerClientExtensions
     {
         public static Result RequestStartServer(
             this IServerManagerClient serverManagerClient,

@@ -5,7 +5,7 @@ using RestSharp;
 
 namespace ArmaForces.ArmaServerManager.Discord.Features
 {
-    public abstract class ManagerClientBase
+    internal abstract class ManagerClientBase
     {
         private readonly IManagerConfiguration _configuration;
         protected IRestClient ManagerClient { get; set; }

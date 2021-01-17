@@ -5,7 +5,7 @@ using RestSharp;
 
 namespace ArmaForces.ArmaServerManager.Discord.Features.ServerConfig
 {
-    public class ConfigurationManagerClient : ManagerClientBase, IConfigurationManagerClient
+    internal class ConfigurationManagerClient : ManagerClientBase, IConfigurationManagerClient
     {
         private string ConfigurationApiPath { get; } = "api/configuration";
 
@@ -86,16 +86,5 @@ namespace ArmaForces.ArmaServerManager.Discord.Features.ServerConfig
                 ? Result.Success(response.Content)
                 : ReturnFailureFromResponse<string>(response);
         }
-    }
-
-    public interface IConfigurationManagerClient
-    {
-        Result<string> GetServerConfiguration();
-
-        Result<string> GetModsetConfiguration(string modsetName);
-
-        Result<string> PutServerConfiguration(string configContent);
-
-        Result<string> PutModsetConfiguration(string modsetName, string configContent);
     }
 }

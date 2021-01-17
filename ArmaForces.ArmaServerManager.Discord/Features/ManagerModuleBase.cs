@@ -4,7 +4,7 @@ using Discord.Commands;
 
 namespace ArmaForces.ArmaServerManager.Discord.Features
 {
-    public class ManagerModuleBase : ModuleBase<SocketCommandContext>
+    public abstract class ManagerModuleBase : ModuleBase<SocketCommandContext>
     {
         protected async Task<IUserMessage> ReplyAsyncTruncate(string message)
         {

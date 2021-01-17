@@ -2,7 +2,7 @@
 
 namespace ArmaForces.ArmaServerManager.Discord.Features.Mods.DTOs
 {
-    public class ModsUpdateRequest
+    internal class ModsUpdateRequest
     {
         public string ModsetName { get; set; }
 
