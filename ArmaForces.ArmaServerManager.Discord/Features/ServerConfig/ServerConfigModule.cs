@@ -18,7 +18,7 @@ namespace ArmaForces.ArmaServerManager.Discord.Features.ServerConfig
 
         [Command("modsetConfig")]
         [Summary("Pobiera config serwera dla danego modsetu.")]
-        public async Task ModsetConfig(string modsetName)
+        public virtual async Task GetModsetConfig(string modsetName)
         {
             var result = _configurationManagerClient.GetModsetConfiguration(modsetName);
 
@@ -29,7 +29,7 @@ namespace ArmaForces.ArmaServerManager.Discord.Features.ServerConfig
 
         [Command("putModsetConfig")]
         [Summary("Wrzuca config serwera dla danego modsetu.")]
-        public async Task PutModsetConfig(string modsetName, [Remainder] string configContent = null)
+        public virtual async Task PutModsetConfig(string modsetName, [Remainder] string configContent = null)
         {
             if (Context.Message.Attachments.Any(x => x.Filename.EndsWith(".json")))
             {
@@ -56,7 +56,7 @@ namespace ArmaForces.ArmaServerManager.Discord.Features.ServerConfig
 
         [Command("serverConfig")]
         [Summary("Pobiera główny config serwera.")]
-        public async Task ServerConfig()
+        public virtual async Task GetServerConfig()
         {
             var result = _configurationManagerClient.GetServerConfiguration();
 
@@ -67,7 +67,7 @@ namespace ArmaForces.ArmaServerManager.Discord.Features.ServerConfig
 
         [Command("putServerConfig")]
         [Summary("Wrzuca główny config serwera.")]
-        public async Task PutServerConfig([Remainder] string configContent = null)
+        public virtual async Task PutServerConfig([Remainder] string configContent = null)
         {
             if (Context.Message.Attachments.Any(x => x.Filename.EndsWith(".json")))
             {
