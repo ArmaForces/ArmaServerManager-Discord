@@ -17,7 +17,7 @@ namespace ArmaForces.ArmaServerManager.Discord.Features.ServerConfig
         }
 
         [Command("modsetConfig")]
-        [Summary("Pobiera config serwera dla danego modsetu.")]
+        [Summary("Downloads modset server config. Eg. !modsetConfig default")]
         public virtual async Task GetModsetConfig(string modsetName)
         {
             var result = _configurationManagerClient.GetModsetConfiguration(modsetName);
@@ -28,7 +28,7 @@ namespace ArmaForces.ArmaServerManager.Discord.Features.ServerConfig
         }
 
         [Command("putModsetConfig")]
-        [Summary("Wrzuca config serwera dla danego modsetu.")]
+        [Summary("Uploads modset server config. Config can be provided as attached *.json file or as a JSON string after modsetName.")]
         public virtual async Task PutModsetConfig(string modsetName, [Remainder] string configContent = null)
         {
             if (Context.Message.Attachments.Any(x => x.Filename.EndsWith(".json")))
@@ -55,7 +55,7 @@ namespace ArmaForces.ArmaServerManager.Discord.Features.ServerConfig
         }
 
         [Command("serverConfig")]
-        [Summary("Pobiera główny config serwera.")]
+        [Summary("Downloads main server config.")]
         public virtual async Task GetServerConfig()
         {
             var result = _configurationManagerClient.GetServerConfiguration();
@@ -66,7 +66,7 @@ namespace ArmaForces.ArmaServerManager.Discord.Features.ServerConfig
         }
 
         [Command("putServerConfig")]
-        [Summary("Wrzuca główny config serwera.")]
+        [Summary("Uploads main server config.")]
         public virtual async Task PutServerConfig([Remainder] string configContent = null)
         {
             if (Context.Message.Attachments.Any(x => x.Filename.EndsWith(".json")))
