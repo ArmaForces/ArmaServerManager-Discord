@@ -26,7 +26,7 @@ namespace ArmaForces.ArmaServerManager.Discord.Features.Mods
             var result = await _modsManagerClient.UpdateMods(modsetName, scheduleAt);
 
             await result.Match(
-                onSuccess: () => ReplyAsync($"Aktualizacja modyfikacji {modsetName} zaplanowana na {scheduleAt ?? DateTime.Now}"),
+                onSuccess: () => ReplyAsync($"Mods update of {modsetName} modset is scheduled at {scheduleAt ?? DateTime.Now}"),
                 onFailure: ReplyAsyncTruncate);
         }
     }
