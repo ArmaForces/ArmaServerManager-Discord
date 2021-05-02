@@ -2,10 +2,14 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
-	<RepositoryUrl>https://github.com/ArmaForces/ArmaServerManager-Discord.git</RepositoryUrl>
-	<RepositoryType>git</RepositoryType>
-	<PackageLicenseFile>LICENSE</PackageLicenseFile>
-	<Version>0.3.0</Version>
+  <RepositoryUrl>https://github.com/ArmaForces/ArmaServerManager-Discord.git</RepositoryUrl>
+  <RepositoryType>git</RepositoryType>
+  <PackageLicenseFile>LICENSE</PackageLicenseFile>
+  <Version>0.3.0</Version>
+  <Description>Integration with ArmaServerManager for Discord bots.</Description>
+  <Copyright>ArmaForces</Copyright>
+  <Authors>ArmaForces</Authors>
+  <Company>ArmaForces</Company>
   </PropertyGroup>
 
   <ItemGroup>
