@@ -1,9 +1,15 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
-	<RepositoryUrl>https://github.com/ArmaForces/ArmaServerManager-Discord.git</RepositoryUrl>
-	<RepositoryType>git</RepositoryType>
+  <TargetFramework>netcoreapp3.1</TargetFramework>
+  <RepositoryUrl>https://github.com/ArmaForces/ArmaServerManager-Discord.git</RepositoryUrl>
+  <RepositoryType>git</RepositoryType>
+  <PackageLicenseFile>LICENSE</PackageLicenseFile>
+  <Version>0.3.0</Version>
+  <Description>Integration with ArmaServerManager for Discord bots.</Description>
+  <Copyright>ArmaForces</Copyright>
+  <Authors>ArmaForces</Authors>
+  <Company>ArmaForces</Company>
   </PropertyGroup>
 
   <ItemGroup>
@@ -13,6 +19,13 @@
     <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="5.0.0" />
     <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="5.0.0" />
     <PackageReference Include="RestSharp" Version="106.11.7" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\LICENSE">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
   </ItemGroup>
 
 </Project>
